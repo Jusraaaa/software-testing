@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="sq">
+<head>
+    <meta charset="UTF-8">
+    <title>Software Testing - Jusra Ferati</title>
+</head>
+<body>
+
+    <h1>Software Testing</h1>
+    <h2>Jusra Ferati</h2>
+
+    <p>Gjej numrin maksimal nga një listë:</p>
+
+    <input type="text" id="numbers" placeholder="Shkruaj numra p.sh 3,5,2">
+    <button onclick="findMax()">Gjej Max</button>
+
+    <p id="result"></p>
+
+    <script>
+        function findMax() {
+            let input = document.getElementById("numbers").value;
+            let arr = input.split(",");
+            
+            let max = 0; 
+
+            for (let i = 0; i < arr.length; i++) {
+                if (arr[i] > max) {
+                    max = arr[i];
+                }
+            }
+
+            document.getElementById("result").innerText = "Max: " + max;
+        }
+    </script>
+
+</body>
+</html>
